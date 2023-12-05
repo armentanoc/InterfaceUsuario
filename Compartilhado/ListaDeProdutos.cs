@@ -12,7 +12,7 @@ namespace Compartilhado
                 "Iogurte"
             };
 
-        public List<string> ListarProdutos()
+        public List<string> GetList()
         {
             return produtos;
         }
@@ -29,7 +29,7 @@ namespace Compartilhado
             
         }
 
-        public List<string> ListarProdutosOrdemAlfabetica()
+        public List<string> GetListInAlfabeticalOrder()
         {
             return produtos.Order().ToList();
         }

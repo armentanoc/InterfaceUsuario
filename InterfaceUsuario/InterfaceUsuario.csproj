@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Compartilhado\Compartilhado.csproj" />
+    <ProjectReference Include="..\ConsoleInteraction\ConsoleInteraction.csproj" />
   </ItemGroup>
 
 </Project>

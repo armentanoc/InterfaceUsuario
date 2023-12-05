@@ -13,10 +13,8 @@ namespace InterfaceUsuario
         {
             Console.WriteLine("Bem-vindo ao sistema");
             ListaDeProdutos listaDeProdutos = new ListaDeProdutos();
-            
-            bool encerrou = false;
 
-            while(!encerrou)
+            while(true)
             {
                 imprimirMenu();
                 Console.Write("Digite sua opção: ");
@@ -54,8 +52,12 @@ namespace InterfaceUsuario
                         Console.WriteLine($"Lista completa dos produtos que começam com {letra}:\n");
                         imprimirProdutos(listaDeProdutos.ListarProdutosQueComecamComALetra(letra));
                         break;
+                    case 6:
+                        Console.WriteLine("Programa encerrado.");
+                        Environment.Exit(0);
+                        break;
                     default:
-                        encerrou = true;
+                        Console.WriteLine("Opção inválida. Tente novamente");
                         break;
 
                 }
@@ -63,7 +65,6 @@ namespace InterfaceUsuario
             }
 
         }
-
 
         private char ReadChar()
         {

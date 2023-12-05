@@ -31,5 +31,17 @@
 
             return -1;
         }
+
+        public static string NonNullString(string prompt)
+        {
+            string userInput;
+            do
+            {
+                Console.Write(prompt);
+                userInput = Console.ReadLine();
+            } while (string.IsNullOrWhiteSpace(userInput));
+
+            return userInput;
+        }
     }
 }

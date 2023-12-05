@@ -18,7 +18,7 @@ namespace InterfaceUsuario
             Console.WriteLine("6 - Sair");
             Console.WriteLine("\nDigite a opção: ");
         }
-        public static void Products(List<string> productsList, string prompt)
+        public static void Products(List<string> productsList, string prompt = "Lista de Produtos: \n")
         {
             Console.WriteLine(prompt);
             foreach (var product in productsList)

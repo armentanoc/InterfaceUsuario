@@ -22,10 +22,9 @@ namespace Compartilhado
             products.Add(newProduct);  
         }
 
-        public void RemoveProduct(string productToRemove)
+        public bool RemoveProduct(string productToRemove)
         {
-            if(products.Contains(productToRemove))
-                products.Remove(productToRemove);
+            return products.Remove(productToRemove);
         }
 
         public List<string> GetListInAlfabeticalOrder()

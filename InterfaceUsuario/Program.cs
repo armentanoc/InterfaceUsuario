@@ -4,8 +4,8 @@
     {
         static void Main(string[] args)
         {
-            GeradorDeInterface gerador = new GeradorDeInterface();
-            gerador.Gerar();
+            InterfaceGenerator generator = new InterfaceGenerator();
+            generator.Generate();
         }
     }
 }

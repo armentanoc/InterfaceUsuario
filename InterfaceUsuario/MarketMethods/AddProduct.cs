@@ -1,14 +1,15 @@
 ﻿using Compartilhado;
 using ConsoleInteraction;
+using InterfaceUsuario;
 
-namespace InterfaceUsuario
+namespace MarketList.Operator.MarketMethods
 {
     public class AddProduct
     {
         public static void TryAddingProduct(ProductsList productsList)
         {
             Display.Products(productsList.GetList());
-            string productToAdd = Receive.NonNullString("\nDigite o produto que você gostaria de adicionar:\n");
+            string productToAdd = Receive.NonNullString("\nInforme o nome do produto que deseja adicionar: ");
             productToAdd = Format.Product(productToAdd);
 
             try

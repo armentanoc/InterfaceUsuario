@@ -2,8 +2,7 @@
 namespace InterfaceUsuario
 {
     using Compartilhado;
-    using ConsoleInteraction;
-    using System.Globalization;
+    using MarketList.Operator.MarketMethods;
 
     public class InterfaceGenerator
     {
@@ -38,9 +37,7 @@ namespace InterfaceUsuario
                     Display.Products(productsList.GetListInAlfabeticalOrder(), "\nLista completa de produtos em ordem alfabética:\n");
                     break;
                 case "5":
-                    Console.Write("Digite a primeira letra:\n");
-                    char letter = Receive.Letter();
-                    Display.Products(productsList.GetProductsThatStartsWith(letter), $"\nLista completa dos produtos que começam com {letter}:\n");
+                    FilterProducts.ByLetter(productsList);
                     break;
                 case "6":
                     Console.WriteLine("Programa encerrado.\n");

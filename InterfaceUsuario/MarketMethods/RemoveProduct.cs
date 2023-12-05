@@ -1,7 +1,8 @@
 ﻿using Compartilhado;
 using ConsoleInteraction;
+using InterfaceUsuario;
 
-namespace InterfaceUsuario
+namespace MarketList.Operator.MarketMethods
 {
     public class RemoveProduct
     {

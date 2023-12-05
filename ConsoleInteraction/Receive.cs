@@ -1,23 +1,8 @@
-﻿namespace ConsoleInteraction
+﻿
+namespace ConsoleInteraction
 {
     public class Receive
     {
-        public static char Letter()
-        {
-            bool validLetter = false;
-            while (!validLetter)
-            {
-                string txt = Console.ReadLine();
-
-                validLetter = (txt.Length == 1) && Char.IsLetter(txt[0]);
-                if (validLetter)
-                    return txt.ToUpper()[0];
-                Console.WriteLine("Digite uma entrada válida");
-            }
-
-            return '0';
-        }
-
         public static int IntNumber()
         {
             bool validNumber = false;
@@ -42,6 +27,23 @@
             } while (string.IsNullOrWhiteSpace(userInput));
 
             return userInput;
+        }
+
+        public static char NonNullChar(string prompt)
+        {
+            string userInput;
+            do
+            {
+                Console.Write(prompt);
+                userInput = Console.ReadLine();
+            } while (!IsCharValid(userInput));
+
+           return Convert.ToChar(userInput.ToUpper());
+        }
+
+        private static bool IsCharValid(string? userInput)
+        {
+            return !string.IsNullOrEmpty(userInput) && userInput.Length == 1;
         }
     }
 }
